@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #242424;
+    box-sizing: border-box;
+}
+#main_body{
+    justify-items: center;
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+}
+#main_select{
+    margin-top: 40px;
+    height: 40px;
+    width: 200px;
+    border:1px solid transparent;
+    border-radius: 3px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+}
+#hospital_container{
+    position: absolute;
+    overflow: auto;
+    justify-items: center;
+    top: -100%;
+    background-color: rgba(70, 37, 37, 0.4);
+    height: 100%;
+    width: 100%;
+}
+#hospital_table{
+    margin:80px 15% 40px 15%;
+    background-color: white;
+    width: 70%;
+    min-height: 500px;
+    border-radius: 4px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+}
+#hospital_table table{
+    width: 100%;
+}
+.table_header{
+    height: 50px;
+    font-size: 0.9em;
+    background-color: #003049;
+    color: white;
+}
+.td1{
+    width: 40%;
+}
+.td2,.td3,.td4,.td5{
+    width: 10%;
+}
+.table_data{
+    font-family: 'Nunito', sans-serif;
+    height: 35px;
+    font-size: 0.9em;
+    text-align: center;
+}
+#close_detail{
+    background-color: #003049;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    top:28px;
+    right: 15%;
+}
+.close_detail:hover{
+    cursor: pointer;
+}
+#path7{
+    fill: #ec1330;
+}
+#path10{
+    fill: #350606;
+}
+#path15{
+    fill: #db555c;
+}
+#path25{
+    fill: #cc1818;
+}
+#path26{
+    fill: #f50d47;
+}
+#path28{
+    fill: #9b1627;
+}
+#path31{
+    fill: #680009;
+}
+#path7:hover,#path10:hover,#path15:hover,#path25:hover,#path26:hover,#path28:hover,#path31:hover{
+    fill: #2c081a;
+    display: block;
+}
+#path7:hover{
+    display: block;
+}
+#path10:hover{
+    display: block;
+}
+#path15:hover{
+    display: block;
+}
+#path25:hover{
+    display: block;
+}
+#path26:hover{
+    display: block;
+}
+#path28:hover{
+    display: block;
+}
+#path31:hover{
+    display: block;
+}
+#text76,#text114,#text108,#text100,#text88,#text94,#text82{
+    font-weight: bold;
+    display: none;
+    color: white;
+}
+.inanimation{
+    animation-name: inlayout;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes inlayout{
+    from{top:-100%}
+    to{top:0%}
+}
+.outanimation{
+    animation-name: outlayout;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes outlayout{
+    from{top:0%}
+    to{top:-100%}
+}
+@media only screen and (max-width: 600px) {
+    svg{
+        width: 100%;
+    }
+    #hospital_container{
+        font-size: 0.7em;
+    }
+    h2{
+        text-align: center;
+        font-size: 0.8em;
+    }
+    #hospital_table{
+        margin:75px 0 40px 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,134 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #242424;
+    background-color: #F4F6FA;
+
+}
+#logo{
+    position: relative;
+    font-weight: bold;
+    font-size: 1.3em;
+    z-index: 2;
+}
+#logo:hover{
+    cursor: pointer;
+}
+.active_link{
+    border-bottom: 2px solid #D62828;
+}
+#navigation{
+    background-color: #242424;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.app_header{
+    padding-top:10px;
+    font-weight:bold;
+    font-size:1.3em;
+    color:white;
+    height:40px;
+    background-color:#242424;
+}
+#menu_main{
+    background-color:white;
+    text-align:center;
+    padding-bottom:10px;
+    max-height: 450px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#form_button{
+    margin-top: 20px;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    background-color:#D62828;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+input{
+    height:30px;
+    width:200px;
+    border:none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#menu_menu{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 400px 700px;
+    justify-content: center;
+    grid-gap: 3em;
+}
+#menu_side{
+    background-color:white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.side_add{
+    padding-top: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.side_but{
+    font-weight: bold;
+    border: transparent;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    background-color:#D62828;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#side_form div:nth-child(odd){
+    background-color: #900C3E;
+    color: white;
+}
+#side_form div:nth-child(even){
+    background-color: #571845;
+    color: white;
+}
+#remove_details{
+    background-color: white;
+    margin: 40px 0px 40px 10%;
+    width: 80%;
+}
+.remove_items{
+    display: grid;
+    grid-template-columns: 120px auto;
+    min-height: 100px;
+}
+.remove_title{
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+}
+.remove_item{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 1em;
+}
+.remove_single{
+    padding: 15px;
+    font-size: 0.9em;
+    max-width: 50%;
+    max-height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #cdcdcd;
+    border-radius: 10px;
+}
+.remove_single:hover{
+    cursor: pointer;
+}

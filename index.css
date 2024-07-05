@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #242424;
+    background-color: white;
+}
+button{
+    font-family: 'Nunito', sans-serif;
+}
+#search_body{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    height: 550px;
+}
+#search_body_doc{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+#search_body_doc p:nth-child(1){
+    font-family: 'Montserrat', sans-serif;
+    color:#003049;
+    font-weight: 700;
+    font-size: 2em;
+}
+#search_body_doc p:nth-child(2){
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+    color: grey;
+    width: 200px;
+    font-size: 0.87em;
+}
+#search_body_doc button,#search_body_med button,#search_body_hos button,#search_body_covid button{
+    height:35px;
+    color:white;
+    background-color: #003049;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    border:2px solid #003049;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#search_body_doc button:hover{
+    color:#003049;
+    background-color: white;
+}
+#search_body_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #003049;
+    clip-path: circle(68.7% at 76% 27%);
+}
+#search_body_container img{
+    height: 350px;
+}
+#search_body_med{
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #003049;
+    height: 450px;
+    font-size: 0.9em;
+}
+#search_body_med img,#search_body_hos img{
+    height: 200px;
+}
+#search_body_med p:nth-child(1),#search_body_hos p:nth-child(1),.search_body_covid_p{
+    font-weight: 500;
+    font-size: 1.6em
+}
+#search_body_med button,#search_body_covid button{
+    width: 200px;
+    color:#003049;
+    background-color: white;
+}
+#search_body_med button:hover,#search_body_hos button:hover,#search_body_covid button:hover{
+    cursor: pointer;
+}
+#search_body_hos{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 450px;
+    clip-path: polygon(65% 0, 70% 15%, 74% 0, 100% 0, 100% 100%, 19% 100%, 0 100%, 0 0);
+    font-size: 0.9em;
+}
+#search_body_hos img{
+    height: 200px;
+}
+#search_body_hos button{
+    width: 200px;
+    color:white;
+    background-color: #003049;
+}
+#search_body_covid{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fafafa;
+    background-color: #003049;
+    height: 450px;
+    clip-path: polygon(14% 0, 19% 14%, 23% 0, 100% 0, 100% 100%, 19% 100%, 0 100%, 0 0);
+    font-size: 0.9em;
+}
+.search_body_covid_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#search_body_covid img{
+    height: 250px;
+}
+#search_body_covid button{
+    width: 200px;
+    color:#003049;
+    background-color: white;
+}
+.covid_index_data{
+    display: flex;
+}
+.covid_index_data div{
+    width: 100px;
+    background-color: white; 
+    border-radius: 5px;
+    color: #003049;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin:0px 15px 15px 15px;
+} 
+
+@keyframes services_item{
+    from{box-shadow: 1px 1px 1px 1px transparent;transform: scale(1.0);}
+    to{ box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+      ; transform: scale(1.05);}
+}
+@media only screen and (max-width: 600px) {
+    #search_body{
+        grid-template-columns: 1fr;
+    }
+    #search_body_container{
+       display: none;
+    }
+    .info_body_holder img{
+        display: none;
+    }
+    .search_body_covid_div{
+        font-size: 0.8em;
+    }
+    .covid_index_data div{
+        width: 80px;
+    }
+}

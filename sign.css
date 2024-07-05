@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #242424;
+    background-image: linear-gradient(to left, #ffc371 , #ff5f6d);
+}
+.logo{
+    position: relative;
+    font-weight: bold;
+    color:#FF1A00;
+    z-index: 2;
+    
+}
+.container{
+    margin-top: 60px;
+}
+.sign{
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1.5fr 1fr;
+    margin-left: 15%;
+    width: 70%;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.sign_image{
+    margin: auto;
+    width: 80%;
+}
+.sign_main{
+    padding: 40px 15px 40px 15px;
+}
+.sign_form{
+    display: grid;
+    height: 250px;
+    width: 300px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+input{
+    border: transparent;
+    outline: none;
+}
+.sign_input_dis{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+}
+.sign_button{
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+.sign_button button{
+    font-weight: bold;
+    border: transparent;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.active{
+    color: white;
+    background-color: #EA1C81;
+}
+.inactive{
+    color: #EA1C81;
+    background-color: white;
+}
+.sign_input_dis span{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+}
+#sign_name,#sign_email,#sign_password{
+    padding-bottom: 4px;
+}
+.active_input{
+    border-bottom: 2px solid #EA1C81;
+}
+.inactive_input{
+    border-bottom: 1px solid grey;
+}
+@media only screen and (max-width: 600px){
+    .sign_image{
+        display: none;
+    }
+    .sign{
+        grid-template-columns: 1fr;
+        margin-left: 2.5%;
+        width: 95%;
+    }
+    .sign_main{
+        justify-self: center;
+    }
+}

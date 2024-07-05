@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="sign.css">
+        <link rel="stylesheet" href="nav.css">
+    </head>
+    <body>
+        <?php 
+        include_once('DbConfig.php');
+        $con=new Dbconfig();
+        if(isset($_POST['signin'])){
+            header("location:signin.php");
+        }
+        include('nav.php'); 
+        ?>
+        <div class="container">
+            <div class="sign">
+                <img class="sign_image" src="icons/doctor_sign.svg"/>
+                <div class="sign_main">
+                    <i style="color:red" class="fa fa-heartbeat"></i><span class="logo"> WE CARE</span>
+                    <h2>Welcome to family</h2>
+                    <div class="sign_form">
+                        <form method="POST">
+                            <div id="sign_name" class="sign_input_dis inactive_input">
+                                <span><i class="fa fa-male fa-2x" style="color:#ababab;"></i></span>
+                                <div>
+                                    <p>Full Name</p>
+                                    <input id="input_name" type="text" name="name" placeholder="Your name" required>
+                                </div>
+                            </div>
+                            <div id="sign_email" class="sign_input_dis inactive_input">
+                                <span><i class="fa fa-at fa-2x" style="color:#ababab"></i></span>
+                                <div>
+                                    <p>Email</p>
+                                    <input id="input_email" type="email" name="email" placeholder="Enter email" required>
+                                </div>
+                                
+                            </div>
+                            <div id="sign_password" class="sign_input_dis inactive_input">
+                                <span><i class="fa fa-lock fa-2x" style="color:#ababab;"></i></span>
+                                <div>
+                                    <p>Password</p>
+                                    <input id="input_pass" type="password" name="password" placeholder="Your Password" required>
+                                </div>
+                            </div>
+                            <div class="sign_button">
+                                <button name="signup" class="active">Sign Up</button>
+                                <button name="signin" class="inactive" formnovalidate>Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('input_name').addEventListener('focus',function(){
+                document.getElementById('sign_name').classList.remove('inactive_input');
+                document.getElementById('sign_name').classList.add('active_input');
+            });
+            document.getElementById('input_name').addEventListener('blur',function(){
+                document.getElementById('sign_name').classList.remove('active_input');
+                document.getElementById('sign_name').classList.add('inactive_input');
+            });
+            document.getElementById('input_email').addEventListener('focus',function(){
+                document.getElementById('sign_email').classList.remove('inactive_input');
+                document.getElementById('sign_email').classList.add('active_input');
+            });
+            document.getElementById('input_email').addEventListener('blur',function(){
+                document.getElementById('sign_email').classList.remove('active_input');
+                document.getElementById('sign_email').classList.add('inactive_input');
+            });
+            document.getElementById('input_pass').addEventListener('focus',function(){
+                document.getElementById('sign_password').classList.remove('inactive_input');
+                document.getElementById('sign_password').classList.add('active_input');
+            });
+            document.getElementById('input_pass').addEventListener('blur',function(){
+                document.getElementById('sign_password').classList.remove('active_input');
+                document.getElementById('sign_password').classList.add('inactive_input');
+            });
+        </script>
+        <?php
+        if(isset($_POST['signup'])){
+            $fullname=$_POST['name'];
+            $username=$_POST['email'];
+            $password=$_POST['password'];
+            $checkuser=$con->connection->query("SELECT * from signup where username='$username'");
+            if($checkuser->num_rows==0){
+                $storeuser=$con->connection->query("INSERT into signup values('','$fullname','$username','$password','','','','','','')");
+                if($storeuser){
+                ?>
+                <script>
+                    alert("Registration successful");
+                    window.location.assign("signin.php");
+                </script>
+                <?php
+                }
+            }
+            else{
+                ?>
+                <script>alert("Email already used")</script>
+                <?php
+            }
+        }
+        ?>
+    </body>
+</html>

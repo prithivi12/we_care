@@ -1,0 +1,215 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #242424;
+}
+#search_body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height:60px;
+    text-align: end;
+    background: #003049;
+}
+#label_form{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    font-weight: bold;
+    color: white;
+    font-size: 1.4em;
+    justify-items: end;
+    align-items: center;
+}
+.vl {
+    justify-self: start;
+    border-left: 4px solid white;
+    border-radius: 5px;
+    height: 40px;
+  }
+#search_form input{
+    margin-top:10px;
+    padding-left: 20px;
+    width: 80%;
+    font-size: 1.05em;
+    height: 35px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+}
+#search_form input::placeholder{
+    color: #cdcdcd;
+    opacity: 1;
+}
+#search_button{
+    height: 30px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #242424;
+    position: relative;
+    right: 32px;
+}
+#search_button:hover{
+    cursor: pointer;
+}
+#search_results{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
+    padding: 30px;
+}
+.search_item{
+    width: 70%;
+    min-height: 500px;
+    border-radius: 5px;
+    background: white;
+}
+.search_header{
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    border-radius: 2px;
+    grid-gap: 0.5em;
+}
+.search_header span{
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+}
+.search_header span:hover{
+    cursor: pointer;
+    background-color: #F77F00;
+}
+.design{
+    display: none;
+    padding: 20px;
+}
+.search_image{
+    justify-self: end;
+    max-width: 100%;
+    max-height: 100%;
+}
+.search_buy_detail{
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+#search_cart{
+    margin-top: 50px;
+}
+.search_cart_cont{
+    display: grid;
+    width: 100%;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.search_button{
+    font-weight: bold;
+    background-color: #D62828;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.search_button:hover{
+    cursor: pointer;
+}
+#cart_button{
+    z-index: 10;
+    width: 1.5em;
+    height: 1.5em;
+    position: fixed;
+    text-align: center;
+    right: 1em;
+    bottom: 1em;
+    padding: 10px;
+    font-size: 2em;
+    background-color: #003049;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 50%;
+}
+#cart_container{
+    font-size: 0.9em;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 400px;
+    display: none;
+    grid-template-rows:400px 50px;
+    position: fixed;
+    text-align: center;
+    border-top:2px solid #EA1C81;
+    right: 2em;
+    bottom:8em;
+}
+#cart_items{
+    overflow-y: scroll;
+}
+.cart_single{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr 1fr 1.5fr 1fr;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.16);
+}
+.text-align{
+    text-align: center;
+}
+.header_active{
+    background-color: #F77F00;
+}
+.header_inactive{
+    background-color: #FCBF49;
+}
+.active{
+    display: block;
+}
+.remove_but:hover{
+    cursor: pointer;
+    color: #EA1C81;
+}
+#cart_cart{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #label_form{
+        display: none;
+    }
+    #search_body{
+        grid-template-columns: 1fr;
+    }
+    #search_form input{
+        font-size: 0.8em;
+        width: 80%;
+    }
+    #search_results{
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    .search_item{
+        width: 100%;
+        min-height: 500px;
+    }
+    .search_header{
+        grid-gap: 0.2em;
+    }
+    .search_header span{
+        padding-top: 15px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    #cart_container{
+        width: 95%;
+        right: 2.5%;
+    }
+}
